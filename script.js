@@ -55,6 +55,39 @@ window.addEventListener("scroll", () => {
 
 //  for animtion when visible 
 
-function animation(){
+// Wait for the entire HTML document to be fully loaded and parsed
+document.addEventListener("DOMContentLoaded", function () {
 
-}
+    // Create a new IntersectionObserver instance
+    const observer = new IntersectionObserver(entries => {
+        // Loop through all observed elements (bars) that have intersected (entered the viewport)
+        entries.forEach(entry => {
+            // console.log(entry)
+            // Check if the element is currently visible (at least 50% in viewport as per threshold below)
+            if (entry.isIntersecting) {
+                const el = entry.target; // Get the DOM element that is being observed
+            
+                // Based on its class, add the corresponding animation class to trigger CSS animation
+                if (el.classList.contains("bar-html")) {
+                    el.classList.add("animate-html"); // Starts the HTML bar animation
+                } else if (el.classList.contains("bar-css")) {
+                    el.classList.add("animate-css");  // Starts the CSS bar animation
+                } else if (el.classList.contains("bar-js")) {
+                    el.classList.add("animate-js");   // Starts the JS bar animation
+                }
+
+                // Stop observing this element so the animation only runs once
+                observer.unobserve(el);
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when at least 50% of the element is visible in the viewport
+    });
+
+    // Select all elements with bar-html, bar-css, and bar-js classes and observe them
+    document.querySelectorAll('.bar-html, .bar-css, .bar-js').forEach(bar => {
+        observer.observe(bar); // Start observing each progress bar
+    });
+
+});
+// I have made the above function with help of AI;

@@ -17,6 +17,7 @@
     opacity: 0;
     margin: 5px;
     font-size: xx-large;
+    margin: 20px;
     animation: fadeIn 2s ease-in-out infinite;
 }
 
@@ -60,6 +61,7 @@
 
 .language--sect h4 {
     /* background-color: blue; */
+    
     text-align: center;
     font-family: sans-serif;
     font-size: x-large;
@@ -91,27 +93,26 @@
     box-shadow: 0px 1px ;
     overflow: hidden;
 }
-.bar-html{
+
+.bar-html , .bar-css ,.bar-js{
     height: 100%;
     width: 90%;
     text-align: center;
     background-color: blue;
-    animation: progress1 1s ease 1;
+    color: white;
 }
-.bar-css{
-    height: 100%;
-    width: 75%;
-    text-align: center;
-    background-color: blue;
-    animation: progress2 1s ease 1;
+/* Classes to trigger animations */
+.animate-html {
+    animation: progress1 1s ease forwards;
 }
-.bar-js{
-    height: 100%;
-    width: 65%;
-    text-align: center;
-    background-color: blue;
-    animation: progress3 1s ease 1;
+.animate-css {
+    animation: progress2 1s ease forwards;
 }
+.animate-js {
+    animation: progress3 1s ease forwards;
+}
+
+
 .display {
     height: 400px;
     background-color: rgb(21, 255, 0);
@@ -141,6 +142,7 @@
     }
 }
 @keyframes progress2{
+
     from{
         width: 0;
     }
