@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skill Progress Bars</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f4f4f4;
+    }
+
+    .skills-container {
+      width: 400px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,1);
+    }
+
+    .skill {
+      margin-bottom: 20px;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      background: #e0e0e0;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 20px;
+    }
+
+    .progress {
+      height: 100%;
+      line-height: 20px;
+      color: white;
+      text-align: center;
+      background-color: #4CAF50;
+    }
+
+    .html .progress {
+      width: 90%;
+      background-color: #e44d26;
+    }
+
+    .css .progress {
+      width: 75%;
+      background-color: #264de4;
+    }
+
+    .js .progress {
+      width: 65%;
+      background-color: #f0db4f;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+
+<div class="skills-container">
+  <div class="skill html">
+    <div class="skill-name">HTML</div>
+    <div class="progress-bar">
+      <div class="progress">90%</div>
+    </div>
+  </div>
+
+  <div class="skill css">
+    <div class="skill-name">CSS</div>
+    <div class="progress-bar">
+      <div class="progress">75%</div>
+    </div>
+  </div>
+
+  <div class="skill js">
+    <div class="skill-name">JavaScript</div>
+    <div class="progress-bar">
+      <div class="progress">65%</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    margin: 0%;
+    transition: 1 ease;
+    scroll-behavior: smooth;
+}
+
+body {
+     background-color: #BDFCC9;
+     /* height just of scrolling purpose  */
+     height: 1200px;
+}
+
+/* about nav_bar */
+nav {
+    /* background-color: rgb(44, 112, 56); */
+    /* background: url(pics/banner.webp ) no-repeat; */
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 2px 2px rgba(27, 16, 15, 0.8);
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+    transition: height 1s ease;
+}
+
+/* about nave logo  */
+.nav_logo {
+    /* width: 27rem; */
+    /* background-color: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: rgb(248, 250, 252);
+}
+
+/* for span text ingradients  */
+.forIngradients {
+    background: linear-gradient(to right, rgb(0, 4, 255), rgb(255, 0, 13));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    font-size: xx-large;
+    animation: fadeIn 2s ease-in-out infinite;
+}
+
+/* for nav bar links div */
+.nav_menu {
+    height: 90px;
+    /* width: 80%; */
+    /* background-color: blueviolet; */
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    /* top:0; */
+    /* margin-bottom: 15rem; */
+    /* display: none; */
+}
+
+/* nave_links */
+.nav_link {
+    height: 40px;
+    width: 120px;
+    background-color: rgb(91, 224, 224);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-family: roboto, 'sans-serif';
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgb(50, 54, 54);
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 10px;
+    text-decoration: none;
+    color: rgb(17, 20, 216);
+}
+
+.nav_link:hover {
+    box-shadow: 2px 2px 2px rgb(50, 54, 54);
+    transform: scaleY(1.09);
+    text-transform: capitalize;
+}
+
+.nav_link:active {
+    background-color: blue;
+    color: rgb(240, 237, 237);
+}
+
+/* for mobile toglle menu */
+.menu-toggle {
+    /* display: none; */
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 21px;
+    color: rgb(48, 47, 46);
+    /* background-color: bisque; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-toggle i {
+    display: none;
+}
+
+
+
+
+
+/* --------------- */
+/* reponsive to screen */
+
+/* for mobile */
+@media (max-width:650px) {
+    nav {
+        flex-direction: row;
+        height: 100px;
+    }
+
+    .nav_logo {
+        position: relative;
+        right: 0px;
+        display: inline;
+        width: 100%;
+        /* background-color: blue; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: small;
+        color: rgb(248, 250, 252);
+    }
+
+    .forIngradients {
+        font-size: large;
+        /* font-weight:bolder; */
+        font-size: none;
+    }
+
+    .nav_menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: inline;
+        /* background-color: antiquewhite; */
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-toggle i {
+        display: inline;
+    }
+
+    .nav_menu {
+        position: absolute;
+        top: 8rem;
+        gap: 1rem;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 200px;
+        background-color: rgba(73, 180, 24, 0.514);
+        border-radius: 30px 30px 30px 30px;
+        flex-direction: column;
+        transition: 1s;
+    }
+
+    .to_display_menu {
+        display: flex;
+        position: absolute;
+        top: 8rem;
+        gap: 1rem;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 200px;
+        background-color: rgba(73, 180, 24, 0.514);
+        border-radius: 30px 30px 30px 30px;
+        flex-direction: column;
+        transition: 1s;
+    }
+
+    .discript {
+        top: 7rem;
+    }
+}
+
+/* animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
