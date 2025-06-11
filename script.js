@@ -91,3 +91,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 // I have made the above function with help of AI;
+
+
+// animation for move_box_fram
+
+let bobble = document.querySelectorAll(".bobble");
+
+bobble.forEach(value=>
+    console.log(value)
+)

@@ -3,7 +3,8 @@
     height: auto;
     top: 10rem;
     /* background-color: aqua; */
-    display: grid;
+    /* display: grid; turn back this when finished  */ 
+    display: none;
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr;
