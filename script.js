@@ -95,8 +95,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // animation for move_box_fram
 
-let bobble = document.querySelectorAll(".bobble");
+const radios = document.querySelectorAll(".bobble");
+const panels = document.querySelectorAll(".content-panel");
+let currentIndex = 0;
+let intervalId;
 
-bobble.forEach(value=>
-    console.log(value)
-)
+function showPanel(index) {
+    panels.forEach((panel, i) => {
+        panel.classList.toggle("active", i === index);
+        radios[i].checked = (i === index);
+    });
+    currentIndex = index;
+}
+
+function autoCycle() {
+    intervalId = setInterval(() => {
+        currentIndex = (currentIndex + 1) % panels.length;
+
+        showPanel(currentIndex);
+    }, 3000); // Change every 3 seconds
+}
+
+// Manual selection by radio buttons
+radios.forEach((radio, i) => {
+    radio.addEventListener("change", () => {
+        clearInterval(intervalId); // Stop auto cycle on manual selection
+        showPanel(i);
+        autoCycle(); // Optionally restart cycle
+    });
+});
+
+// Initialize
+showPanel(currentIndex);
+autoCycle();

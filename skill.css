@@ -127,7 +127,9 @@
   gap: 10px;
   margin-bottom: 20px;
 }
-
+.bubble-nav  input:hover:not(hover){
+    background-color: black;
+}
 
 
 
@@ -146,7 +148,7 @@
 
 .content-panel {
   display: none;
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn .5s ease-in-out;
 }
 
 .content-panel.active {
