@@ -93,38 +93,35 @@ document.addEventListener("DOMContentLoaded", function () {
 // I have made the above function with help of AI;
 
 
-// animation for move_box_fram
+// animation for display div 
+let bobbles = document.querySelectorAll(".bubbles");
+let panels = document.querySelectorAll(".content-panel");
+let currentIndex =0; //for starting animation from first card
+let toclear =currentIndex ;// this will stor the record of previuos index
 
-const radios = document.querySelectorAll(".bobble");
-const panels = document.querySelectorAll(".content-panel");
-let currentIndex = 0;
-let intervalId;
-
-function showPanel(index) {
-    panels.forEach((panel, i) => {
-        panel.classList.toggle("active", i === index);
-        radios[i].checked = (i === index);
-    });
-    currentIndex = index;
+function showPanels(index){
+    panels[toclear].classList.remove("active")
+    bobbles[toclear].classList.remove("checked")
+    panels[index].classList.add("active")
+    bobbles[index].classList.add("checked")
+    toclear = index;
 }
 
-function autoCycle() {
-    intervalId = setInterval(() => {
-        currentIndex = (currentIndex + 1) % panels.length;
+// to manually switching data
+bobbles.forEach((btn,index )=>{
+    btn.addEventListener('click',()=>{
+        console.log("or is it working ")
+        currentIndex =index;
+        showPanels(index)
+    })
+})
 
-        showPanel(currentIndex);
-    }, 3000); // Change every 3 seconds
-}
+let time = setInterval(()=>{
+    showPanels(currentIndex)
+    currentIndex++
 
-// Manual selection by radio buttons
-radios.forEach((radio, i) => {
-    radio.addEventListener("change", () => {
-        clearInterval(intervalId); // Stop auto cycle on manual selection
-        showPanel(i);
-        autoCycle(); // Optionally restart cycle
-    });
-});
-
-// Initialize
-showPanel(currentIndex);
-autoCycle();
+    if(currentIndex === panels.length){
+        currentIndex =0;
+    }
+    
+},3000)

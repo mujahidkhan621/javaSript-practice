@@ -1,4 +1,5 @@
 .skill {
+    /* display: flex;  turn it back when the rest of worke done*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,24 +120,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-}
+  padding: 10px;
+  padding-bottom: 20px;
+ border: 1px solid;
+ border-radius: 10px;
+ box-shadow: 0 4px 10px rgba(0,0,0,1);
 
+}
+/* bobbles for cards  */
 .bubble-nav {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
-.bubble-nav  input:hover:not(hover){
-    background-color: black;
+.bubbles{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: gray;
+    cursor: pointer;
+}
+.checked{
+    background-color: blue;
 }
 
 
-
+/* to show cards */
 .card-container {
   width: 90%;
   height: 100%;
-  background-color: blue;
+  background-color: rgb(17, 203, 228);
   position: relative;
   overflow: hidden;
   padding: 10px;
@@ -144,15 +157,34 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
+/* cards */
 .content-panel {
-  display: none;
-  animation: fadeIn .5s ease-in-out;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    /* background-color: aqua; */
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 0;
+    transition:opacity 0.2s ease, transform 2s ease;
 }
-
-.content-panel.active {
-  display: block;
+/* color just for showing purpuses */
+.red{
+    background-color: rgb(243, 58, 12);
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}
+.active {
+    z-index: 1;
+    transform: translateX(0%);
+    opacity: 1;
 }
 
 
