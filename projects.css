@@ -1,0 +1,24 @@
+.project_section{
+    position: relative;
+    top: 11rem;
+    /* height: 400px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: aquamarine; */
+    padding: 20px;
+}
+.cards-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+   
+
+}
+
+.cards{
+    height:400px;
+    background-color: rgb(94, 112, 112);
+}

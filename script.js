@@ -110,7 +110,7 @@ function showPanels(index){
 // to manually switching data
 bobbles.forEach((btn,index )=>{
     btn.addEventListener('click',()=>{
-        console.log("or is it working ")
+        console.log("is it working ")
         currentIndex =index;
         showPanels(index)
     })
@@ -124,4 +124,4 @@ let time = setInterval(()=>{
         currentIndex =0;
     }
     
-},3000)
+},5000)
