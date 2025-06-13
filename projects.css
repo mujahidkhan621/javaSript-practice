@@ -1,4 +1,4 @@
-.project_section{
+.project_section {
     position: relative;
     top: 11rem;
     /* height: 400px; */
@@ -9,16 +9,98 @@
     /* background-color: aquamarine; */
     padding: 20px;
 }
-.cards-container{
+
+.cards-container {
     width: 100%;
-    display: grid;
-    grid-template-columns:1fr 1fr 1fr 1fr;
-    column-gap: 10px;
-   
+    display:flex;
+    flex-wrap: wrap;
+    /* display: grid; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    column-gap: 5px;
+    row-gap: 10px;
 
 }
 
-.cards{
-    height:400px;
-    background-color: rgb(94, 112, 112);
+.cards {
+    box-sizing: border-box;
+    height: 400px;
+    width: 350px;
+    background: linear-gradient(145deg, #4b3b6e, #2c1e47);
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #9c27b0;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.cards:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+.project-image {
+    height: 65%;
+    width: 100%;
+    background: url('https://images.unsplash.com/photo-1526045612212-70caf35c14df') no-repeat center;
+    background-size: cover;
+    border-radius: 10px;
+    border: 2px solid #fff3e6;
+}
+
+.cards p {
+    margin: 10px 0;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 5px;
+    overflow: auto;
+    flex-grow: 1;
+    color: #fff3e6;
+}
+
+.cards-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cards-btn button {
+    flex: 1;
+    margin: 0 5px;
+    background-color: rgb(100, 221, 100);
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cards-btn button:hover {
+    background-color: #22ee07;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #f5e6cc;
+}
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .cards{
+        width: 360px;
+    }
+
 }

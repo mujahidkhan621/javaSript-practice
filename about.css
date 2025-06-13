@@ -4,7 +4,7 @@
     top: 10rem;
     /* background-color: aqua; */
     /* display: grid; turn back this when finished  */ 
-    display: none;
+    display: grid;
     justify-content: center;
     align-items: center;
     grid-template-columns: 1fr 1fr;
