@@ -2,12 +2,15 @@
     position: relative;
     height: auto;
     top: 10rem;
+    /* top: 1rem; */
     /* background-color: aqua; */
-    /* display: grid; turn back this when finished  */ 
+    /* display:flex; turn back this when finished  */ 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    row-gap: 10px;
+    padding: 10px;
     /* background-color: rgba(16, 129, 129, 0.918); */
 }
 
@@ -15,9 +18,9 @@
 display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
     grid-column-gap: 2px;
-    grid-row-gap: 12px;
+    /* grid-row-gap: 12px; */
 }
 .discript {
     position: relative;
@@ -33,7 +36,7 @@ display: grid;
     flex-direction: column;
     align-items: center;
     justify-content:stretch;
-    transform: skew(-2deg)
+    /* transform: skew(-2deg) */
 }
 
 .discript>h1 {
@@ -57,12 +60,21 @@ display: grid;
         display: flex;
         flex-direction: column;
         justify-content: stretch;
-        top: 1rem;
+        top:5rem;
         grid-column-gap: 2px;
     }
-
+    .discription-container{
+        position: relative;
+         display: flex;
+        flex-direction: column;
+        padding: 0;
+        position: relative;
+         /* justify-content:start; */
+        /* align-items: center;  */
+        row-gap: 10px;
+    }
     .discript {
-        /* top:8rem; */
+        top:-1rem;
         /* height: 400px; */
         display: flex;
         justify-content: stretch;

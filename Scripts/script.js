@@ -93,7 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
 // I have made the above function with help of AI;
 
 
-// animation for display div 
+// animation for slider in display 
+
 let bobbles = document.querySelectorAll(".bubbles");
 let panels = document.querySelectorAll(".content-panel");
 let currentIndex =0; //for starting animation from first card

@@ -3,14 +3,14 @@
     font-family: sans-serif;
     box-sizing: border-box;
     margin: 0%;
-    transition: 1 ease;
+    transition: all 1s ease;
     scroll-behavior: smooth;
 }
 
 body {
      background-color: #7dca8e;
      /* height just of scrolling purpose  */
-     height: 1200px;
+     /* height: 1200px; */
 }
 
 /* about nav_bar */
@@ -50,17 +50,6 @@ nav {
     color: black;
 }
 
-/* for span text ingradients  */
-.forIngradients {
-    background: linear-gradient(to right, rgb(0, 4, 255), rgb(255, 0, 13));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    opacity: 0;
-    font-size: xx-large;
-    animation: fadeIn 2s ease-in-out infinite;
-}
 
 /* for nav bar links div */
 .nav_menu {
@@ -136,7 +125,7 @@ nav {
 @media (max-width:650px) {
     nav {
         flex-direction: row;
-        height: 100px;
+        height: 80px;
     }
 
     .nav_logo {

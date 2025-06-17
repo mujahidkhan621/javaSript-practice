@@ -5,22 +5,10 @@
     align-items: center;
     background-color: rgba(123, 160, 125, 0.281);
     position: relative;
-    top: 11rem;
+    top: 10rem;
     padding: 10px;
 }
-.banner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-   width: 100%; 
-   background-color: aqua;
-   border-top: 5px solid green;
-   border-top-left-radius: 20px;
-   border-top-right-radius: 20px;
-   box-shadow: 0px 4px 4px 0px rgba(129, 117, 117, 0.404);
-   margin-bottom: 1rem;
-}
+
 .skill--div {
     /* height: 400px; */
     /* background-color: rgb(25, 26, 25); */
@@ -28,7 +16,7 @@
     display: grid;
     column-gap: 1rem;
     row-gap: 1rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:repeat(2,1fr);
 }
 
 /* for language dive */
@@ -111,88 +99,14 @@
     animation: progress3 1s ease forwards;
 }
 
-/* display animation card */
-.display {
-  height: 400px;
-  background-color: rgb(150, 197, 146);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px;
-  padding-bottom: 20px;
- border: 1px solid;
- border-radius: 10px;
- box-shadow: 0 4px 10px rgba(0,0,0,1);
-
-}
-/* bobbles for cards  */
-.bubble-nav {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-.bubbles{
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: gray;
-    cursor: pointer;
-}
-.checked{
-    background-color: blue;
-}
-
-
-/* to show cards */
-.card-container {
-  width: 90%;
-  height: 100%;
-  background-color: rgb(17, 203, 228);
-  position: relative;
-  overflow: hidden;
-  padding: 10px;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-
-/* cards */
-.content-panel {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    /* background-color: aqua; */
-    transform: translateX(100%);
-    opacity: 0;
-    z-index: 0;
-    transition:opacity 0.2s ease, transform 2s ease;
-}
-/* color just for showing purpuses */
-.red{
-    background-color: rgb(243, 58, 12);
-}
-.yellow{
-    background-color: yellow;
-}
-.green{
-    background-color: green;
-}
-.active {
-    z-index: 1;
-    transform: translateX(0%);
-    opacity: 1;
-}
-
-
-
-
-
 
 /* to make responsive */
 @media (max-width:650px) {
+    .skill{
+        top: 5rem;
+    }
     .skill--div {
+    
         grid-template-columns: 1fr;
     }
 
@@ -207,6 +121,7 @@
         opacity: 1;
     }
 }
+/* animation for language bar */
 @keyframes progress1{
     from{
         width: 0;
