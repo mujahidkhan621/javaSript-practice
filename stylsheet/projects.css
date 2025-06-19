@@ -1,8 +1,8 @@
 .project_section {
     position: relative;
-    top: 11rem;
+    top: 9rem;
     /* height: 400px; */
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,10 +12,10 @@
 
 .cards-container {
     width: 100%;
-    display:flex;
-    flex-wrap: wrap;
-    /* display: grid; */
-    /* grid-template-columns: repeat(4, 1fr); */
+    /* display:flex; */
+    /* flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     column-gap: 5px;
     row-gap: 10px;
 
@@ -23,8 +23,8 @@
 
 .cards {
     box-sizing: border-box;
-    height: 400px;
-    width: 350px;
+    height: 380px;
+    /* width: 300px; */
     background: linear-gradient(145deg, #4b3b6e, #2c1e47);
     margin: auto;
     padding: 10px;
@@ -93,14 +93,30 @@
 
 @media screen and (max-width: 1024px) {
     .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+     .cards-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
 }
 
+@media screen and (max-width: 650px) {
+    .project_section{
+        top:5rem ;
+    }
+     .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
 @media screen and (max-width: 500px) {
-    .cards{
-        width: 360px;
+     .cards-container {
+        grid-template-columns: repeat(1, 1fr);
     }
 
 }

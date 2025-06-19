@@ -2,9 +2,10 @@
 .display {
 position: relative;
  /* top:11rem; */
-  height: 400px;
+  /* height: 400px; */
+  height: 70vh;
   width: 100%;
-  background-color: rgb(53, 199, 39);
+  /* background-color: rgb(53, 199, 39); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +13,7 @@ position: relative;
   padding-bottom: 20px;
  border: 1px solid;
  border-radius: 10px;
- box-shadow: 0 0px 10px rgba(0,0,0,1);
+ /* box-shadow: 0 0px 10px rgba(0,0,0,1); */
 
 }
 /* bobbles for cards  */
@@ -92,4 +93,10 @@ position: relative;
     z-index: 1;
     transform: translateX(0%);
     opacity: 1;
+}
+
+@media screen and (max-width :775px) {
+    .display {
+        height: 50vh;
+    }
 }
