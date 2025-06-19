@@ -50,15 +50,15 @@
             <div class="card-container">
                 <div class="content-panel red active" id="panel1">
                     <h1 class="heading">First card contents <h1>
-                        <a href="../html/skill.html" class="nav_link  link_button">Demo</a>
+                            <a href="../html/skill.html" class="nav_link  link_button">Demo</a>
                 </div>
                 <div class="content-panel yellow" id="panel2">
                     <h1 class="heading">second card contents <h1>
-                        <a href="../html/skill.html" class="nav_link  link_button">Demo</a>
+                            <a href="../html/skill.html" class="nav_link  link_button">Demo</a>
                 </div>
                 <div class="content-panel green" id="panel3">
                     <h1 class="heading">Third card contents <h1>
-                    <a href="../html/skill.html" class="nav_link  link_button">Demo</a>
+                            <a href="../html/skill.html" class="nav_link  link_button">Demo</a>
                 </div>
             </div>
         </div>
@@ -104,7 +104,45 @@
     </section>
 
 
-    <script src="../Scripts/script.js"></script>
+    <script src="../Scripts/script.js">
+
+    </script>
+
 </body>
+<script>
+    // animation for slider in display 
+
+    let bobbles = document.querySelectorAll(".bubbles");
+    let panels = document.querySelectorAll(".content-panel");
+    let currentIndex = 0; //for starting animation from first card
+    let toclear = currentIndex;// this will stor the record of previuos index
+
+    function showPanels(index) {
+        panels[toclear].classList.remove("active")
+        bobbles[toclear].classList.remove("checked")
+        panels[index].classList.add("active")
+        bobbles[index].classList.add("checked")
+        toclear = index;
+    }
+
+    // to manually switching data
+    bobbles.forEach((btn, index) => {
+        btn.addEventListener('click', () => {
+            // console.log("is it working ")
+            currentIndex = index;
+            showPanels(index);
+        })
+    })
+
+    let time = setInterval(() => {
+        showPanels(currentIndex)
+        currentIndex++
+
+        if (currentIndex === panels.length) {
+            currentIndex = 0;
+        }
+
+    }, 5000);
+</script>
 
 </html>
