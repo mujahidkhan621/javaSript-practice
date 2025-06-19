@@ -125,4 +125,7 @@ let time = setInterval(()=>{
         currentIndex =0;
     }
     
-},5000)
+},5000);
+
+
+
