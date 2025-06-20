@@ -26,7 +26,7 @@
             </div>
 
             <div class="nav_menu js_menu">
-                <a href="#Home" target="_self" class="nav_link js_link">Home</a>
+                <a href="../html/Index.html" target="_self" class="nav_link js_link">Home</a>
                 <!-- <a href="#" class="nav_link js_link">About Me</a> -->
                 <a href="../html/skill.html" class="nav_link js_link">My Skills</a>
                 <a href="../html/projects.html" class="nav_link js_link">My Projects</a>
@@ -66,8 +66,36 @@
         </div>
         </div>
         <!-- banner for  about-->
+         <!-- bar for skill  -->
         <div class="banner">
+            <!-- Load Font Awesome for the WhatsApp icon -->
+
+
+            <a href="https://wa.me/923434706944" target="_blank" class="whatsapp-link">
+                <button class="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i>
+                    <span class="whatsapp-text">Chat with us on WhatsApp</span>
+                </button>
+            </a>
+
+
             <h1 class="forIngradients">About</h1>
+            <!-- =======try======= -->
+
+            <div class="social-media">
+                <a href="https://facebook.com/yourusername" target="_blank" aria-label="Facebook"><i
+                        class="fab js_link-icon fa-facebook"></i></a>
+                <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram"><i
+                        class="fab js_link-icon fa-instagram"></i></a>
+                <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub"><i
+                        class="fab js_link-icon fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn"><i
+                        class="fab js_link-icon fa-linkedin"></i></a>
+                <a href="mailto:you@example.com" aria-label="Email"><i class="fas js_link-icon fa-envelope"></i></a>
+            </div>
+            <div class="social_links ">
+                <i class="fa-solid js_btn fa-list"></i>
+            </div>
         </div>
         <!-- discription div  -->
         <div class="discription-container">
@@ -103,46 +131,11 @@
 
     </section>
 
-
+     <script src="../Scripts/animation_slider.js"></script>
+    <script src="../Scripts/changIcon.js"></script>
     <script src="../Scripts/script.js">
 
     </script>
 
 </body>
-<script>
-    // animation for slider in display 
-
-    let bobbles = document.querySelectorAll(".bubbles");
-    let panels = document.querySelectorAll(".content-panel");
-    let currentIndex = 0; //for starting animation from first card
-    let toclear = currentIndex;// this will stor the record of previuos index
-
-    function showPanels(index) {
-        panels[toclear].classList.remove("active")
-        bobbles[toclear].classList.remove("checked")
-        panels[index].classList.add("active")
-        bobbles[index].classList.add("checked")
-        toclear = index;
-    }
-
-    // to manually switching data
-    bobbles.forEach((btn, index) => {
-        btn.addEventListener('click', () => {
-            // console.log("is it working ")
-            currentIndex = index;
-            showPanels(index);
-        })
-    })
-
-    let time = setInterval(() => {
-        showPanels(currentIndex)
-        currentIndex++
-
-        if (currentIndex === panels.length) {
-            currentIndex = 0;
-        }
-
-    }, 5000);
-</script>
-
 </html>
